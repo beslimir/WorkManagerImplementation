@@ -28,7 +28,7 @@ class DownloadWorker(
         val response = FileApi.instance.downloadImage()
         response.body()?.let { body ->
             return withContext(Dispatchers.IO) {
-                val file = File(context.cacheDir, "fcbayern.png")
+                val file = File(context.cacheDir, "fcbayern.jpg")
                 val outputStream = FileOutputStream(file)
                 outputStream.use { stream ->
                     try {

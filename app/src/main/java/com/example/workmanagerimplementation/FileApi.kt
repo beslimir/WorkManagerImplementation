@@ -10,13 +10,13 @@ interface FileApi {
     companion object {
         val instance by lazy {
             Retrofit.Builder()
-                .baseUrl("https://upload.wikimedia.org")
+                .baseUrl("https://pbs.twimg.com")
                 .build()
                 .create(FileApi::class.java)
         }
     }
 
-    @GET("/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/1200px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png")
+    @GET("/profile_images/611534117855821824/QwiV9f5W_400x400.jpg")
     suspend fun downloadImage(): Response<ResponseBody>
 
 }

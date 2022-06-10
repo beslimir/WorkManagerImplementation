@@ -34,10 +34,10 @@ class ColorFilterWorker(
             canvas.drawBitmap(resultBmp, 0f, 0f, paint)
 
             withContext(Dispatchers.IO) {
-                val resultImageFile = File(context.cacheDir, "fcbayern-filter.png")
+                val resultImageFile = File(context.cacheDir, "fcbayern-filter.jpg")
                 val outputStream = FileOutputStream(resultImageFile)
                 val successful = resultBmp.compress(
-                    Bitmap.CompressFormat.PNG,
+                    Bitmap.CompressFormat.JPEG,
                     90,
                     outputStream
                 )
